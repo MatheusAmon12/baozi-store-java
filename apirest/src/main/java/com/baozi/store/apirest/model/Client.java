@@ -12,7 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "client")
+@Table(name = "clients")
 @Entity
 public class Client {
 	@Id

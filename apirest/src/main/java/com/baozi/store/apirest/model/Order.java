@@ -7,23 +7,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Table(name = "order")
+@Table(name = "orders")
 @Entity	
 public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ManyToOne
-	@JoinColumn(name = "client_id")
+	@Column(name = "client_id")
 	private Long clientId;
 	
-	@ManyToOne
-	@JoinColumn(name = "product_id")
+	@Column(name = "product_id")
 	private Long productId;
 	private Integer quantity;
 	public Long getId() {
